@@ -47,7 +47,7 @@ class MetropolitanApp:
         image_pil = Image.open(io.BytesIO(requests.get(image_url).content))
         image_pil = self.resizeArtImage(image_pil)
         self.photo_image = ImageTk.PhotoImage(image_pil)
-        self.image_on_cancas = self.canvas.create_image(self.canvas_width/2 + 5, self.canvas_height/2 + 5, anchor=tk.CENTER, image=self.photo_image)
+        self.image_on_canvas = self.canvas.create_image(self.canvas_width/2 + 5, self.canvas_height/2 + 5, anchor=tk.CENTER, image=self.photo_image)
 
         # information area
         self.artInfoArea = tk.Message(base, relief="raised", textvariable=self.art_info, width=self.canvas_width)
@@ -78,7 +78,7 @@ class MetropolitanApp:
         image_pil = Image.open(io.BytesIO(requests.get(image_url).content))
         image_pil = self.resizeArtImage(image_pil)
         self.photo_image = ImageTk.PhotoImage(image_pil)
-        self.canvas.itemconfig(self.image_on_cancas, image=self.photo_image)
+        self.canvas.itemconfig(self.image_on_canvas, image=self.photo_image)
 
     def resizeArtImage(self, art_image):
         if (art_image.width > art_image.height):
