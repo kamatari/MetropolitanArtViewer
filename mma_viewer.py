@@ -140,4 +140,3 @@ base.title('The Metropolitan Museum of Art Collection Viewer')
 base.geometry('500x700')
 app = MetropolitanApp(base)
 base.mainloop()
-
