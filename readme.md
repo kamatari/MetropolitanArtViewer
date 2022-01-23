@@ -3,7 +3,7 @@
 You can search for artworks by keyword and browse the results.
 
 ## Usage
-`$ python3 mna_viewer.py`
+`$ python3 mma_viewer.py`
 
 ## Screenshot
 ![screenshot 1](screenshots/screenshot1.png)
